@@ -23,6 +23,8 @@ function CarList() {
         name='전체차량'
         brand='B2C 차량 대여 서비스'
         img={list ? list[0].attribute.imageUrl : null}
+        amount='가격을 확인해보세요'
+        carId=''
       />
       <Category />
       {isLoading && <ErrorMessage>불러오는 중입니다</ErrorMessage>}
