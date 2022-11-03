@@ -14,10 +14,6 @@ const WebViewContainer = styled.div`
 `;
 
 const ViewContainer = styled.div`
-  // props usage
-  /* min-width: ${(props) => props.minWidth || 'auto'}; */
-
-  // theme usage
   ${({ theme }) => theme.device.mobile} {
     display: block;
   }
