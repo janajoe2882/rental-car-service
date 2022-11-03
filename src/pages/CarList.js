@@ -7,7 +7,6 @@ import Category from '../components/oranisms/Category';
 import { useThemeContext } from '../utils/ThemeContext';
 import { FUEL_TYPE, SEGMENT } from '../utils/types';
 import useGetList from '../utils/useGetList';
-import Logo from '../utils/logo.png';
 
 function CarList() {
   const { list } = useThemeContext();
@@ -20,7 +19,11 @@ function CarList() {
 
   return (
     <>
-      <MetaBox name='전체차량' brand='B2C 차량 대여 서비스' img={Logo} />
+      <MetaBox
+        name='전체차량'
+        brand='B2C 차량 대여 서비스'
+        img={list ? list[0].attribute.imageUrl : null}
+      />
       <Category />
       {isLoading && <ErrorMessage>불러오는 중입니다</ErrorMessage>}
       <div>
