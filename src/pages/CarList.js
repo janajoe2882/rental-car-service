@@ -17,12 +17,6 @@ function CarList() {
     getCarList();
   }, []);
 
-  useEffect(() => {
-    if (isSuccess) {
-      console.log('list', list);
-    }
-  }, [isSuccess]);
-
   return (
     <>
       <Category />
