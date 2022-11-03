@@ -19,16 +19,18 @@ function CardDescription() {
     <>
       {isLoading && <ErrorMessage>불러오는 중입니다</ErrorMessage>}
       {!isLoading && !noResult && selectedCar && (
-        <>
+        <div>
           <MetaBox
             name={selectedCar.name}
             brand={selectedCar.brand}
             img={selectedCar.imageUrl}
+            amount={selectedCar.amount}
+            carId={carId}
           />
           <div>
             <CarDescription {...selectedCar} />
           </div>
-        </>
+        </div>
       )}
       {noResult && <ErrorMessage>결과가 없습니다</ErrorMessage>}
     </>
