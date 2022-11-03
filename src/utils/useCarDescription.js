@@ -12,7 +12,7 @@ export default function useCarDescription(carId) {
   const getCarDescription = () => {
     setIsLoading(true);
 
-    if (list) {
+    if (list && isSuccess) {
       const [selected] = list.filter((el) => el.id === Number(carId));
 
       if (!selected) {

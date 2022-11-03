@@ -1,7 +1,7 @@
 /* eslint-disable no-unneeded-ternary */
 import React, { useState } from 'react';
 import useGetList from '../../utils/useGetList';
-import CategoryItem from '../atoms/CategoryItem';
+import CategoryIem from '../atoms/CategoryItem';
 import CategoryBox from '../atoms/CatogryContainer';
 import { segmentKeys, segmentValues } from '../../utils/types';
 
@@ -21,19 +21,19 @@ export default function Category() {
 
   return (
     <CategoryBox>
-      <CategoryItem
+      <CategoryIem
         isSelected={selected === 'ALL'}
         onClick={() => selectAllCar()}
       >
         전체
-      </CategoryItem>
+      </CategoryIem>
       {segmentValues.map((el, i) => (
-        <CategoryItem
+        <CategoryIem
           isSelected={selected === segmentKeys[i]}
           onClick={() => selectCarCategory(i)}
         >
           {el}
-        </CategoryItem>
+        </CategoryIem>
       ))}
     </CategoryBox>
   );
