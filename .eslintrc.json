@@ -37,6 +37,8 @@
     "react/jsx-no-useless-fragment": "off",
     "react/no-children-prop": "off",
     "react/no-unstable-nested-components": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-no-constructed-context-values": "warn"
+    // "react/jsx-one-expression-per-line": "off"
   }
 }
