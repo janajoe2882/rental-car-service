@@ -8,6 +8,7 @@ export default function MetaBox(props) {
       <title>{name}</title>
       <meta property='og:title' content={name} />
       <meta property='og:description' content={brand} />
+      <meta property='description' content={brand} />
       <meta property='og:image' content={img} />
     </Helmet>
   );

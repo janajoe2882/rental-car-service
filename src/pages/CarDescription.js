@@ -15,19 +15,20 @@ function CardDescription() {
     getCarDescription();
   }, []);
 
-  console.log(selectedCar);
   return (
     <>
       {isLoading && <ErrorMessage>불러오는 중입니다</ErrorMessage>}
       {!isLoading && !noResult && selectedCar && (
-        <div>
+        <>
           <MetaBox
             name={selectedCar.name}
             brand={selectedCar.brand}
             img={selectedCar.imageUrl}
           />
-          <CarDescription {...selectedCar} />
-        </div>
+          <div>
+            <CarDescription {...selectedCar} />
+          </div>
+        </>
       )}
       {noResult && <ErrorMessage>결과가 없습니다</ErrorMessage>}
     </>
